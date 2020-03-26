@@ -1,0 +1,11 @@
+---
+# Docker configuration.
+docker_install_compose: true
+docker_apt_ignore_key_error: false
+docker_users:
+  - ubuntu
+
+
+# Security configuration
+security_fail2ban_enabled: false
+security_autoupdate_enabled: false

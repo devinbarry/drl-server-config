@@ -1,0 +1,4 @@
+---
+- src: geerlingguy.security
+- src: nvidia.nvidia_driver
+- src: geerlingguy.docker

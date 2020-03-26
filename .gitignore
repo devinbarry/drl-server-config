@@ -1,0 +1,14 @@
+.DS_Store
+.vagrant
+*.retry
+
+config.yml
+
+roles/geerlingguy.*
+roles/nvidia.nvidia_driver
+
+# Inventory contains secrets and should not be in source control
+inventory
+
+# Ignore Jetbrains files
+.idea/

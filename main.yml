@@ -1,0 +1,25 @@
+---
+- hosts: drlcluster
+  become: true
+
+  vars_files:
+    - vars/main.yml
+
+  pre_tasks:
+    - name: Ensure dependencies are installed.
+      apt:
+        name:
+          - sudo
+          - openssh-server
+        state: present
+
+
+  roles:
+    - role: geerlingguy.security
+      tags: ['security']
+
+    - role: nvidia.nvidia_driver
+      tags: ['nvidia']
+
+    - role: geerlingguy.docker
+      tags: ['docker']
